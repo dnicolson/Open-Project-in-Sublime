@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.dnicolson.alfred.sublopen</string>
+	<key>connections</key>
+	<dict>
+		<key>24718DA1-ACEF-4D02-A361-60A5D34341BF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EAF1C013-DA98-4B2C-A0DA-B47A23CFFB7C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>David Nicolson</string>
+	<key>description</key>
+	<string>Open a project from ~/Sites in Sublime Text.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Open Project in Sublime</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>keyword</key>
+				<string>sub</string>
+				<key>script</key>
+				<string>python sublime.py ~/Sites "{query}"</string>
+				<key>subtext</key>
+				<string>Find Sublime Text Projects</string>
+				<key>title</key>
+				<string>Sublime Text Projects</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>24718DA1-ACEF-4D02-A361-60A5D34341BF</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>if [ -d "/Applications/Sublime Text.app/" ]; then
+	/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n --stay {query}
+else
+	/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl -n --stay {query}
+fi</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>EAF1C013-DA98-4B2C-A0DA-B47A23CFFB7C</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>24718DA1-ACEF-4D02-A361-60A5D34341BF</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>EAF1C013-DA98-4B2C-A0DA-B47A23CFFB7C</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
