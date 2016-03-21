@@ -7,7 +7,7 @@ items = []
 sites = [d for d in os.listdir(projects) if not d.startswith(".")]
 
 if (len(sys.argv) > 2):
-    sites = [s for s in sites if re.match(sys.argv[2],s)]
+    sites = [s for s in sites if re.search(sys.argv[2],s)]
 
 for site in sites:
     path = os.path.join(projects,site)
